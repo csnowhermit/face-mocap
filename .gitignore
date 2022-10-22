@@ -136,3 +136,6 @@ checkpoint/emonet_8.pth
 data/deca_model.tar
 data/FLAME_albedo_from_BFM.npz
 data/resnet50_ft_weight.pkl
+
+assets/
+

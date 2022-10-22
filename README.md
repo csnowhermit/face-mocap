@@ -31,4 +31,11 @@
 ​	人脸表情损失；
 
 # 3、指标
-  blendshape回归损失：0.009663
+blendshape回归损失：0.009663
+
+# 4、纯数学方式解算blendshape
+
+``` python
+python blendshape_matrix_solve.py
+```
+
