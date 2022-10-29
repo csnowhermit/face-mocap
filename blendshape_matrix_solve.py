@@ -245,6 +245,7 @@ def main():
     # 3.Run the model on the data
     for file in os.listdir(input_folder):
         # 4.1、读取数据集
+        file = "qidewang_Frame6240.jpg"
         batch = prepare_data(input_folder, file)
 
         vals, visdict = test(emoca, batch['image'])
@@ -293,12 +294,12 @@ def main():
         print("==================================")
 
         # 分别保存emoca的结果和数学解算后相乘的结果
-        # pytorch3d.io.save_obj("./f.obj", vals['verts'][0], faces[0])
-        # tmp = tmp.reshape(5023, 3)
-        # tmp = torch.tensor(tmp + template_verts_copy, dtype=torch.float32).cuda()
-        # pytorch3d.io.save_obj("./bw.obj", tmp, faces[0])
+        pytorch3d.io.save_obj("./f.obj", vals['verts'][0], faces[0])
+        tmp = tmp.reshape(5023, 3)
+        tmp = torch.tensor(tmp + template_verts_copy, dtype=torch.float32).cuda()
+        pytorch3d.io.save_obj("./bw.obj", tmp, faces[0])
 
-        # break
+        break
     print("Done")
 
 
